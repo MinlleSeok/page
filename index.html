@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="no-js no-svg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ramen Tang</title>
+    <meta name="description" content="Hash Rate" />
+    <meta name="keywords" content="Hash Rate" />
+    <meta name="title" content="Hash Rate" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hash Rate">
+    <meta property="og:description" content="Hash Rate">
+    <link rel="stylesheet" href="index.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <script src="lib/index.js"></script>
+    <div class="title">
+            <h1>Ramen Tang</h1>
+        </div>
+        <div class="menu" id="menu" onclick="listOpen()">
+            <h1>三</h1>
+        </div>
+        <header class="list" id="list">
+            <div class="list-item">Team</div>
+            <div class="list-item">Vision</div>
+            <div class="list-item">Values</div>
+            <div class="list-item">Ramen</div>
+        </header>
+    <div class="swiper-container" id="main-document">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="main-background stock swiper-slide">
+                <div class="text-box right">
+                    <h1>Finance</h1>
+                    <p>sub title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                </div>
+            </div>
+            <div class="main-background frankfurt swiper-slide">
+                <div class="text-box left">
+                    <h1>Investment</h1>
+                    <p>sub title</p>
+                    <p>ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+                </div>
+            </div>
+            <div class="main-background bitcoin swiper-slide">
+                <div class="text-box right">
+                    <h1>Business</h1>
+                    <p>sub title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+                </div>
+            </div>
+        </div>
+        <!-- OPTIONAL PAGINATION CONTROLS HERE -->
+        <div class="t-ScrollBar"></div>
+    </div>
+
+    <script>
+        function listOpen() {
+            if (document.getElementById('list').classList.contains('on')) {
+                document.getElementById('list').className = 'list';
+                document.getElementById('menu').className = 'menu';
+            } else {
+                document.getElementById('list').className = 'list on';
+                document.getElementById('menu').className = 'menu open';
+            }
+        }
+    </script>
+
+    <!--    <script src="lib/modules/pagination.min.js"></script>-->
+    <script>
+        var mySwiper = new Swiper('#main-document', {
+
+            // or 'vertical'
+            direction: 'vertical',
+
+            // touch ratio
+            touchRatio: 1,
+
+            // angle (in degrees) to trigger touch move
+            // also allows a range of values: [0, 90].
+            touchAngle: 45,
+
+            // ratio to trigger swipe
+            longSwipesRatio: 0.5,
+
+            // initial slide
+            // 0 = slide 1
+            initialSlide: 0,
+
+            // infinite loop
+            loop: true,
+
+            // enables mouse wheel
+            mousewheel: true,
+
+            // pagination controls
+            pagination: {
+                el: '.t-ScrollBar',
+                bulletClass: 't-ScrollBar__item',
+                bulletActiveClass: 'is-active'
+            },
+            //            pagination: true,
+
+            // enable passive event listeners
+            passiveListeners: true,
+
+            // enable/disable resistance bounds
+            resistance: true,
+
+            // resistance ratio
+            resistanceRatio: 0.85,
+
+            // animation speed
+            speed: 300,
+
+            // minimal duration (in ms) to trigger swipe
+            longSwipesMs: 300,
+
+            // time to suspend between two swip actions
+            intermittent: 0,
+
+            // space between slides
+            spaceBetween: 0,
+
+            // default CSS classes
+            //            slidePrevClass: 'swiper-slide-prev',
+            //            slideNextClass: 'swiper-slide-next',
+            //            slideActiveClass: 'swiper-slide-active',
+            //            slideClass: 'swiper-slide',
+            //            wrapperClass: 'swiper-wrapper',
+
+            // prevent touchstart (mousedown) event
+            touchStartPreventDefault: true,
+
+            // prevent default for touchstart (mousedown) event
+            touchStartForcePreventDefault: false,
+
+            // if enabled, the propagation of "touchmove" will be stopped
+            touchMoveStopPropagation: false,
+
+            // exclude these elements
+            excludeElements: []
+
+        });
+    </script>
+</body></html>
