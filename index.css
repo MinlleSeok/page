@@ -173,6 +173,22 @@ span {
     right: 12.5vw;
 }
 
+/* Mobile Device */
+@media screen and (max-width : 767px) {
+    .text-box {
+        width: 80%;
+        height: 50%;
+        top: 30vh;
+    }
+    .text-box.left {
+        right: 5%;
+    }
+
+    .text-box.right {
+        left: 5%;
+    }
+}
+
 .t-ScrollBar {
     display: block;
     position: fixed;
